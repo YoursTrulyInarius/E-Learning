@@ -1,0 +1,428 @@
+/* Student Dashboard Specific Styles */
+
+:root {
+    --student-primary: var(--primary);
+    --student-secondary: var(--secondary);
+    --student-accent: var(--complement);
+}
+
+.student-page {
+    background-color: var(--bg-color);
+    color: var(--text-dark);
+}
+
+.student-header {
+    background: var(--white);
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--shadow-soft);
+    border-bottom: 2px solid #E2E8F0;
+    margin-bottom: 40px;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.student-avatar {
+    width: 60px;
+    height: 60px;
+    background: var(--student-primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
+}
+
+.student-welcome h1 {
+    font-size: 1.8rem;
+    margin-bottom: 2px;
+}
+
+.student-welcome p {
+    color: var(--text-light);
+    font-weight: 700;
+}
+
+.btn-logout {
+    background: #F1F5F9;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    color: var(--text-light);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-logout:hover {
+    background: #EF4444;
+    color: white;
+}
+
+/* Section Styling */
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.section-title h2 {
+    font-size: 1.8rem;
+    color: var(--text-dark);
+}
+
+/* Discovery Grid (APIs) */
+.discovery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.discovery-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    display: flex;
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition);
+    border: 1px solid #E2E8F0;
+}
+
+.discovery-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.discovery-card .card-image {
+    width: 40%;
+    background-size: cover;
+    background-position: center;
+    min-height: 200px;
+}
+
+.discovery-card .card-content {
+    padding: 25px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.category-tag {
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--student-primary);
+    margin-bottom: 10px;
+    display: block;
+}
+
+.discovery-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+.discovery-card p {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.btn-read {
+    font-weight: 800;
+    color: var(--student-primary);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+/* Video Grid */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.video-card {
+    background: var(--white);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+}
+
+.video-preview {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.play-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.video-preview:hover .play-overlay {
+    opacity: 1;
+}
+
+.play-overlay i {
+    font-size: 3rem;
+    color: white;
+}
+
+.video-info {
+    padding: 15px;
+}
+
+.video-info h3 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* UI Modes - Grade Progressive Tweaks */
+
+/* K-2: Large, Playful */
+.ui-mode-K-2 .student-avatar {
+    width: 80px;
+    height: 80px;
+    font-size: 2.5rem;
+}
+
+.ui-mode-K-2 .video-info h3 {
+    font-size: 1.4rem;
+}
+
+.ui-mode-K-2 .discovery-card {
+    flex-direction: column;
+}
+
+.ui-mode-K-2 .discovery-card .card-image,
+.ui-mode-K-2 .discovery-card .card-content {
+    width: 100%;
+}
+
+/* 5-6: Professional, Compact */
+.ui-mode-5-6 .video-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+}
+
+.ui-mode-5-6 .discovery-card .card-content {
+    padding: 15px;
+}
+
+/* Subject Selection Grid */
+.subject-discovery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.subject-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: var(--radius-lg);
+    text-align: center;
+    cursor: pointer;
+    transition: var(--transition);
+    border: 3px solid transparent;
+    box-shadow: var(--shadow-soft);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.subject-card i {
+    font-size: 3.5rem;
+    color: var(--student-primary);
+}
+
+.subject-card h3 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.subject-card.math {
+    border-color: #60A5FA;
+}
+
+.subject-card.science {
+    border-color: #34D399;
+}
+
+.subject-card.reading {
+    border-color: #F87171;
+}
+
+.subject-card.social {
+    border-color: #FBBF24;
+}
+
+.subject-card.art {
+    border-color: #A78BFA;
+}
+
+.subject-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: var(--shadow-hover);
+}
+
+/* Subject View UI */
+.subject-view-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: var(--white);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-soft);
+}
+
+.btn-back {
+    padding: 10px 20px;
+    border-radius: var(--radius-pill);
+    background: #F1F5F9;
+    border: none;
+    font-weight: 800;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-back:hover {
+    background: var(--primary);
+    color: white;
+}
+
+.lesson-rich-content p {
+    margin-bottom: 25px;
+    font-size: 1.25rem;
+}
+
+.lesson-rich-content {
+    background: #f8fafc;
+    padding: 30px;
+    border-radius: var(--radius-md);
+    border-left: 5px solid var(--primary);
+}
+
+/* Animations */
+.fade-in-up {
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Kindergarten (Grade K) Specialization */
+.grade-K {
+    --student-primary: #FFB300;
+    /* Sunny Yellow */
+    --student-secondary: #00E5FF;
+    /* Bright Cyan */
+    --student-accent: #FF4081;
+    /* Fun Pink */
+    font-size: 1.25rem;
+}
+
+.grade-K .container {
+    max-width: 1400px;
+    /* Wider for bigger elements */
+}
+
+.grade-K .subject-card {
+    padding: 50px 30px;
+    border-width: 6px;
+    animation: wiggle 3s infinite ease-in-out;
+}
+
+.grade-K .subject-card i {
+    font-size: 6rem;
+}
+
+.grade-K .subject-card h3 {
+    font-size: 2.5rem;
+    font-weight: 900;
+}
+
+.grade-K .stat-card {
+    padding: 40px !important;
+    border: 4px solid #eee;
+}
+
+.grade-K .stat-card h3 {
+    font-size: 2rem;
+}
+
+.grade-K .btn {
+    padding: 20px 40px;
+    font-size: 1.5rem;
+    border-radius: 50px;
+}
+
+.grade-K .lesson-rich-content p {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #1e293b;
+}
+
+.grade-K .modal-content {
+    border: 8px solid var(--student-primary);
+}
+
+/* Playful Wiggle Animation for K */
+@keyframes wiggle {
+
+    0%,
+    100% {
+        transform: rotate(-2deg);
+    }
+
+    50% {
+        transform: rotate(2deg);
+    }
+}
+
+.grade-K .bounce-hover:hover {
+    transform: scale(1.1) rotate(5deg) !important;
+}
+
+.grade-K .points-badge {
+    background: var(--student-accent);
+    padding: 15px 30px;
+    font-size: 1.5rem;
+}
