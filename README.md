@@ -1,8 +1,8 @@
 # LittleLearners Hub - E-Learning Platform
 
 > [!IMPORTANT]
-> **Status:** Phase 1 - Early Development
-> This project has just started and is currently under active production. Features and UI are subject to change.
+> **Status:** Phase 1 - Early Development (Live Production)
+> This project is currently under active production. Please note that some dashboards are still in development and may not function as expected. Additionally, some subjects and educational materials are still being pushed to the system. Development will continue in the upcoming phases.
 
 ## 🚀 Overview
 LittleLearners Hub is a modular E-Learning platform designed specifically for primary education. The system provides a tailored experience for different grade levels, ensuring that content and interface are age-appropriate.
@@ -39,3 +39,5 @@ The system is structured to support the following grades, each with its own modu
 - `/assets`: Global CSS and JS resources.
 - `/uploads`: Storage for educational media.
 
+---
+*Developed for modern classrooms.*
