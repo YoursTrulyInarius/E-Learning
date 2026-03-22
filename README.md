@@ -39,5 +39,4 @@ The system is structured to support the following grades, each with its own modu
 - `/assets`: Global CSS and JS resources.
 - `/uploads`: Storage for educational media.
 
----
-*Developed for modern classrooms.*
+
